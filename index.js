@@ -52,7 +52,7 @@ function calculator(str = '') {
     if (res <= 0) {
       return roman[arr[0]] ? '' : res.toString()
     }
-    return roman[arr[0]] ? convert(res).toString() : res.toString()
+    return (roman[arr[0]] ? convert(res) : res).toString()
   }
 
   function convert(num) {
@@ -66,4 +66,4 @@ function calculator(str = '') {
   }
 }
 
-console.log(calculator('X + IX'))
+console.log(typeof calculator('X + IX'))
